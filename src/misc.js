@@ -98,9 +98,9 @@ function memberIsMod(message) {
 	let ret = false;
 	const modNames = ["Mod", "Moderator", "Wavedash Staff", "Admin"];
 	for (let i = 0; i < modNames.length; i++) {
-		ret = ret || memberHasRole(message, modNames[i]);		
+		ret = ret || memberHasRole(message, modNames[i]);
 	}
-	return ret;
+	return ret || message.author.username.toLowerCase() == "waveparadigm";
 }
 
 function memberHasRole(message, roleName) {
