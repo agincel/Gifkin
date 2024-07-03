@@ -100,7 +100,7 @@ function memberIsMod(message) {
 	for (let i = 0; i < modNames.length; i++) {
 		ret = ret || memberHasRole(message, modNames[i]);
 	}
-	return ret || message.author.username.toLowerCase() == "waveparadigm";
+	return ret;
 }
 
 function memberHasRole(message, roleName) {
